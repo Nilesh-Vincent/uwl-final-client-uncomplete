@@ -1,0 +1,261 @@
+.myProfileContainer {
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  width: 100%;
+  padding-top: 30px;
+  place-items: center;
+}
+
+.myProfileItems {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.redBtn {
+  height: 45px;
+  width: 100px;
+  background-color: #000000;
+  color: white;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.profileHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  border: 1px solid #dddddd;
+  border-radius: 20px;
+}
+
+.userInfo {
+  flex: 3;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.ProfilePhoto {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.ProfilePhotoContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.profilePhotoText {
+  width: 130px;
+  text-align: center;
+}
+
+.userName {
+  font-size: 38px;
+  font-weight: 600;
+  padding-bottom: 12px;
+}
+
+.userEmail {
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 12px;
+}
+
+.userDesc {
+  font-size: auto;
+}
+
+.userPointContainer {
+  display: flex;
+  flex-direction: row;
+  height: 350px;
+}
+
+.mainPoints {
+  flex: 1;
+  background-color: rgb(175, 255, 167);
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: 900;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0px;
+}
+
+.trophyIcon {
+  background: none;
+  height: 170px;
+  width: 170px;
+}
+
+.categoryPoints {
+  flex: 3;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0px 20px;
+}
+
+.categoryPoints img {
+  height: 70px;
+  width: auto;
+}
+
+.categoryItem {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 48%;
+  width: 32%;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 14px;
+}
+
+.whiteWaterRafting {
+  background-color: rgb(252, 162, 162);
+  margin-bottom: 10px;
+}
+
+.rockClimbing {
+  background-color: rgb(255, 238, 162);
+  margin-bottom: 10px;
+}
+.scubaDiving {
+  background-color: rgb(156, 224, 255);
+  margin-bottom: 10px;
+}
+.wildLifeSafari {
+  background-color: rgb(177, 163, 255);
+}
+.trekking {
+  background-color: rgb(255, 170, 241);
+}
+.paragliding {
+  background-color: rgb(255, 209, 167);
+}
+
+.title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.title h1 {
+  font-size: 30px;
+}
+
+.title h2 {
+  font-size: 20px;
+  color: #333;
+}
+
+.badge {
+  height: 120px;
+  width: 120px;
+  margin: 10px;
+  border: 5px solid #fff34d;
+  border-radius: 90%;
+}
+
+.badges {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.activity {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.activityItem {
+  gap: 4px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.activityImg {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.activityName {
+  color: #333;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.activityCity {
+  font-weight: 300;
+}
+
+.activityPrice {
+  font-weight: 500;
+  font-style: bold;
+}
+
+.activityCategoryType {
+  font-weight: 400;
+}
+
+.activityDuration {
+  font-size: 300;
+  font-style: italic;
+}
+
+.sectionHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 30px;
+  margin-top: 60px;
+}
+
+.sectionHeading h1 {
+  font-size: 28px;
+}
+
+.sectionHeading h2 {
+  font-size: 18px;
+  padding-top: 4px;
+  color: #333;
+  margin-bottom: 10px;
+}

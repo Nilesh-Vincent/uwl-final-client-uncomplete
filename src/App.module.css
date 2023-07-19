@@ -1,0 +1,12 @@
+.appContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.appContainerNoSidebarHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 120px);
+  background-color: #f9f9f9;
+}

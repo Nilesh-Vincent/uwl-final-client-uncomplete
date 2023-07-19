@@ -1,0 +1,72 @@
+.bookingContainer {
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  width: 100%;
+  padding-top: 30px;
+  place-items: center;
+}
+
+.bookingItems {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  height: auto;
+}
+
+.bookingItem {
+  border: 1px solid rgb(214, 214, 214);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  height: auto;
+}
+
+.bookingImg {
+  flex: 1;
+}
+
+.bookingImg img {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px 0px 0px 20px;
+  object-fit: cover;
+}
+
+.bookingDetails {
+  margin: 20px 0px;
+  flex: 3;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.detailsLeft p {
+  margin: 2px 0px;
+}
+
+.detailsRight p {
+  margin: 4px 0px;
+}
+
+.detailsLeft {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-left: 16px;
+}
+
+.detailsRight {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: auto;
+}

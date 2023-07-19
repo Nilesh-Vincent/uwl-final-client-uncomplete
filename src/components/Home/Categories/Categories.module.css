@@ -1,0 +1,65 @@
+.activities {
+  width: 100%;
+  max-width: 1024px;
+  gap: 20px;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.activityCategory {
+  width: 325px;
+  height: 250px;
+  position: relative;
+  color: white;
+  border-radius: 14px;
+  overflow: hidden;
+  height: auto;
+  width: auto;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.CategoryImg {
+  width: 325px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.CategoryTitles {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center; /* Center align the titles */
+}
+
+.CategoryTitles h1 {
+  font-size: 35px;
+}
+
+.CategoryTitles h2 {
+  font-size: 17px;
+}
+
+.sectionHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 30px;
+  margin-top: 60px;
+  justify-content: space-around;
+}
+
+.sectionHeading__h1 {
+  font-size: 28px;
+}
+
+.sectionHeading__h2 {
+  font-size: 18px;
+  padding-top: 4px;
+  color: #333;
+  margin-bottom: 10px;
+}

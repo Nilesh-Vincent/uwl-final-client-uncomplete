@@ -1,0 +1,68 @@
+.signUp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  width: 400px;
+  box-shadow: 1px 2px 13px 3px rgba(0, 0, 0, 0.23);
+  -webkit-box-shadow: 1px 2px 13px 3px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 1px 2px 13px 3px rgba(0, 0, 0, 0.23);
+  background-color: #f9f9f9;
+  border-radius: 16px;
+}
+
+.signUp h1 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.signUp form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signUp input {
+  padding: 8px;
+  margin-bottom: 16px;
+  width: 270px;
+  border: 1px solid black;
+}
+
+.signUp input:hover {
+  box-shadow: 0 0 6px #52b1ff;
+  -webkit-box-shadow: 0 0 6px #52b1ff;
+  -moz-box-shadow: 0 0 6px #52b1ff;
+}
+
+.signUp p {
+  color: red;
+  margin-bottom: 8px;
+  width: 270px;
+}
+
+.signUp button {
+  padding: 8px 16px;
+  background-color: #f34242;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 270px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+}
+
+.signUp button:hover {
+  background-color: #c90707;
+}
+
+.signUp .login {
+  margin-top: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.signUp .login a {
+  color: #2b9fff;
+}

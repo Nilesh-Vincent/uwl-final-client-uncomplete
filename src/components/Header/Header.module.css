@@ -1,0 +1,246 @@
+.headerContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  align-items: center;
+  height: 120px;
+  background-color: white;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.search {
+  flex: 3;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10%;
+}
+
+.searchIcon {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+}
+
+.searchItemLocation {
+  display: flex;
+  flex-direction: row;
+  font-size: 50px;
+  margin: 10px 0px 10px 20px;
+  border-right: 1px solid grey;
+  padding-right: 24px;
+}
+
+.searchItemAdventure {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  /*  font-family: sans-serif;
+*/
+  width: 220px;
+  cursor: pointer;
+}
+
+.searchItems {
+  border-radius: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  box-shadow: 1px 2px 13px 3px rgba(0, 0, 0, 0.23);
+  -webkit-box-shadow: 1px 2px 13px 3px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 1px 2px 13px 3px rgba(0, 0, 0, 0.23);
+}
+
+.searchLocation::placeholder {
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.selectAdventure {
+  width: 200px;
+  cursor: pointer;
+}
+
+.option {
+  position: absolute;
+  top: 93px;
+  z-index: 2;
+  background-color: white;
+  width: 200px;
+  cursor: pointer;
+  box-shadow: 1px 2px 13px 3px rgba(0, 0, 0, 0.23);
+  -webkit-box-shadow: 1px 2px 13px 3px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 1px 2px 13px 3px rgba(0, 0, 0, 0.23);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.option li {
+  list-style: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.option li:hover {
+  background-color: lightgray;
+}
+
+.submitBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  background-color: #ff5257;
+  padding: 20px;
+  color: white;
+  border-radius: 40px;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 500;
+}
+
+.trophyIcon {
+  background: none;
+  height: 30px;
+  width: 30px;
+}
+
+.userInfo {
+  flex: 1;
+  max-width: 250px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.userPoints {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 8px;
+}
+
+.userPoints p {
+  font-size: 25px;
+  font-family: "Bebas Neue", sans-serif;
+  padding-top: 5px;
+}
+
+.userProfileIcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #f0f0f0;
+  border-radius: 35px;
+  padding: 10px 7px;
+  column-gap: 4px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.userProfileIcon:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.profilePhoto {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.hamburgerIcon {
+  background: none;
+  height: 25px;
+  width: 25px;
+}
+
+.profileMenu {
+  position: absolute;
+  top: 95px;
+  right: 20px;
+  z-index: 2;
+  background-color: white;
+  width: 200px;
+  cursor: pointer;
+  box-shadow: 1px 2px 13px 3px rgba(0, 0, 0, 0.23);
+  -webkit-box-shadow: 1px 2px 13px 3px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 1px 2px 13px 3px rgba(0, 0, 0, 0.23);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.profileMenu li {
+  list-style: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.profileMenu li:hover {
+  background-color: #f2f2f2;
+}
+
+.authInfo {
+  flex: 1;
+  max-width: 250px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 24px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-right: 25px;
+}
+
+.logIn {
+  cursor: pointer;
+  border: 2px solid #dbdbdb;
+  border-radius: 10px;
+  padding: 8px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  text-decoration: dotted;
+  color: black;
+}
+
+.signUp {
+  border: 2px solid #ff5257;
+  padding: 8px;
+  color: white;
+  background-color: #ff5257;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.profileMenu a {
+  color: black;
+}

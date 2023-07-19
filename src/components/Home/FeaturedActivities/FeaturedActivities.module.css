@@ -1,0 +1,72 @@
+.activity {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.activityItem {
+  gap: 4px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.activityInfo {
+  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0px;
+  color: black;
+}
+
+.activityImg {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.activityName {
+  color: #333;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.activityCity {
+  font-weight: 300;
+}
+
+.activityPrice {
+  font-weight: 500;
+  font-style: bold;
+}
+
+.activityCategoryType {
+  font-weight: 400;
+}
+
+.activityDuration {
+  font-size: 300;
+  font-style: italic;
+}
+
+.sectionHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 30px;
+  margin-top: 60px;
+}
+
+.sectionHeading h1 {
+  font-size: 28px;
+}
+
+.sectionHeading h2 {
+  font-size: 18px;
+  padding-top: 4px;
+  color: #333;
+  margin-bottom: 10px;
+}

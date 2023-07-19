@@ -1,0 +1,20 @@
+.homeContainer h1 {
+  text-align: center;
+}
+
+.homeContainer {
+  flex: 4;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.homeItems {
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  margin-top: 30px;
+}
