@@ -1,3 +1,3 @@
-const BaseURL = "https://nilesh-uwl-final.onrender.com";
+const BaseURL = "http://localhost:5000";
 
 export default BaseURL;
