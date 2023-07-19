@@ -5,7 +5,6 @@ import { useParams } from "react-router-dom";
 import axiosInstance from "../../utils/axiosInstance";
 import BaseURL from "../../utils/BaseURL";
 import axios from "axios";
-import Cookies from "js-cookie";
 
 const AdventureActivity = () => {
   const { id } = useParams();
@@ -15,7 +14,7 @@ const AdventureActivity = () => {
   const [bearerToken, setBearerToken] = useState(null);
 
   useEffect(() => {
-    const token = Cookies.get("jwt");
+    const token = localStorage.getItem("jwt");
     setBearerToken(token);
   }, []);
 
