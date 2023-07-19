@@ -1,3 +1,3 @@
-const BaseURL = "https://agreeable-gray-hermit-crab.cyclic.app/";
+const BaseURL = "https://nilesh-uwl-final.onrender.com";
 
 export default BaseURL;
