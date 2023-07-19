@@ -1,3 +1,3 @@
-const BaseURL = "http://localhost:5000";
+const BaseURL = "https://agreeable-gray-hermit-crab.cyclic.app/";
 
 export default BaseURL;
