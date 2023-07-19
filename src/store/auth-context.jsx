@@ -15,9 +15,7 @@ const AuthContext = React.createContext({
 export const AuthContextProvider = (props) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);  
-  const [token, setToken] = useState('');
-
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const storedUserLoggedInInformation = localStorage.getItem("isLoggedIn");
@@ -40,6 +38,7 @@ export const AuthContextProvider = (props) => {
       .then((response) => {
         console.log("Logout successful!");
         localStorage.setItem("isLoggedIn", "false");
+        localStorage.setItem("jwt", "errloggedout");
         setIsLoggedIn(false);
         setError(null);
         setIsLoading(false);
@@ -72,10 +71,12 @@ export const AuthContextProvider = (props) => {
       .then((response) => {
         console.log("Login successful!");
         console.log(response.data);
+        console.log(response.data.token);
 
         if (response.data.status === "success") {
           setIsLoggedIn(true);
           localStorage.setItem("isLoggedIn", "true");
+          localStorage.setItem("jwt", response.data.token);
           setError(null);
         } else {
           setIsLoggedIn(false);
@@ -119,6 +120,7 @@ export const AuthContextProvider = (props) => {
         if (response.data.status === "success") {
           setIsLoggedIn(true);
           localStorage.setItem("isLoggedIn", "true");
+          localStorage.setItem("jwt", response.data.token);
           setError(null);
         } else {
           setIsLoggedIn(false);

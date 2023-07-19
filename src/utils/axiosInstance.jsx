@@ -1,5 +1,4 @@
 import axios from "axios";
-import Cookies from "js-cookie";
 
 const axiosInstance = axios.create({
   baseURL: "http://localhost:5000/api/v1",
@@ -7,16 +6,15 @@ const axiosInstance = axios.create({
 
 axiosInstance.interceptors.request.use(
   (config) => {
-    const jwtCookie = Cookies.get("jwt");
+    const jwtToken = localStorage.getItem("jwt");
 
-    console.log(jwtCookie)
-    if (jwtCookie) {
-      config.headers["Authorization"] = `Bearer ${jwtCookie}`;
+    if (jwtToken) {
+      config.headers["Authorization"] = `Bearer ${jwtToken}`;
     }
     return config;
   },
   (error) => {
-    Promise.reject(error);
+    return Promise.reject(error);
   }
 );
 
