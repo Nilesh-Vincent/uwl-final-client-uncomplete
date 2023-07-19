@@ -2,7 +2,7 @@ import axios from "axios";
 import Cookies from "js-cookie";
 
 const axiosInstance = axios.create({
-  baseURL: "https://agreeable-gray-hermit-crab.cyclic.app/api/v1",
+  baseURL: "http://localhost:5000/api/v1",
 });
 
 axiosInstance.interceptors.request.use(

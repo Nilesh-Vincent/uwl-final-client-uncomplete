@@ -6,7 +6,7 @@ import scubaDivingImg from "../../assets/scubaDiving.png";
 import whiteWaterRafting from "../../assets/whiteWaterRafting.png";
 import rockClimbing from "../../assets/rockClimbing.png";
 import wildLifeSafari from "../../assets/safari.svg";
-import trekking from "../../assets/trekking.svg";
+import trekking from "../../assets/Trekking.svg";
 import paragliding from "../../assets/paragliding.svg";
 import badge1 from "../../assets/Badges/1.png";
 import badge2 from "../../assets/Badges/2.png";
