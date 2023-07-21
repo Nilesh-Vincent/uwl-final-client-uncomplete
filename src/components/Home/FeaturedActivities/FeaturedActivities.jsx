@@ -30,7 +30,7 @@ const FeaturedActivities = () => {
   return (
     <>
       <div className={styles.sectionHeading}>
-        <h1>TRENDING ADVENTURES</h1>
+        <h1>Trending Adventures</h1>
         <h2>Most popular choices for adventure enthusiasts from Sri Lanka</h2>
       </div>
       <div className={styles.activity}>
@@ -48,14 +48,20 @@ const FeaturedActivities = () => {
                 <section className={styles.activityInfo}>
                   <span className={styles.activityName}>{activity.name}</span>
                   <span className={styles.activityCategoryType}>
-                    {activity.categoryType}
+                    {`${activity.categoryType}`.toUpperCase()}
                   </span>
                   <span className={styles.activityCity}>
                     {activity.location.description}
                   </span>
-                  <span className={styles.activityPrice}>{activity.price}</span>
+                  <span className={styles.activityPrice}>
+                    <p>
+                      <strong>Price:</strong> {`${activity.price} Hours`}
+                    </p>
+                  </span>
                   <span className={styles.activityDuration}>
-                    {activity.duration}
+                    <p>
+                      <strong>Duration:</strong> {`${activity.duration} Hours`}
+                    </p>
                   </span>
                 </section>
               </Link>

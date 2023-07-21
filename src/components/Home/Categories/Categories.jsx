@@ -45,7 +45,7 @@ const Categories = () => {
     <>
       <div className={styles.sectionHeading}>
         <h1 className={styles.sectionHeading__h1}>
-          EXPLORE ADVENTURES BY CATEGORY
+          Explore Adventures By Category
         </h1>
         <h2 className={styles.sectionHeading__h2}>
           Most popular choices for adventure enthuaists from Sri Lanka

@@ -60,6 +60,14 @@ const Leaderboard = () => {
                 key={item.rank}
                 className={`${styles.leaderBoardItem} ${
                   item.name === "Nilesh Vincent" ? styles.highlightedItem : ""
+                } ${
+                  item.rank == 1
+                    ? styles.goldBackground
+                    : item.rank == 2
+                    ? styles.silverBackground
+                    : item.rank == 3
+                    ? styles.bronzeBackground
+                    : ""
                 }`}
               >
                 <div className={styles.LBrank}>{item.rank}</div>

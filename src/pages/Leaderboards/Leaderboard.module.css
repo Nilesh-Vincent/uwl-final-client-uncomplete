@@ -181,3 +181,15 @@
 .highlightedItem {
   background-color: #ff898d;
 }
+
+.goldBackground {
+  background-color: rgb(255, 223, 44);
+}
+
+.silverBackground {
+  background-color: silver;
+}
+
+.bronzeBackground {
+  background-color: lightsalmon;
+}

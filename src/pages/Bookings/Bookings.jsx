@@ -38,7 +38,7 @@ const Bookings = () => {
 
   return (
     <main className={styles.bookingContainer}>
-      <div className={styles.bookingItems}>
+      <div className={styles.bookingItems} key={bookings.id}>
         <h1>My Bookings</h1>
         {bookings.map((booking) => {
           let bookingPointInfo = null;

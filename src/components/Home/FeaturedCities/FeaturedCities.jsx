@@ -26,7 +26,7 @@ const FeaturedCities = () => {
   return (
     <>
       <div className={styles.sectionHeading}>
-        <h1>EXPLORE OUR TOP CITIES FOR ADVENTURE TRAVEL</h1>
+        <h1>Explore Our Top Cities For Adventure Activities.</h1>
         <h2>Most popular choices for adventure enthuaists from Sri Lanka</h2>
       </div>
 

@@ -18,3 +18,40 @@
   position: relative;
   place-items: center;
 }
+
+.progressBar {
+  width: 500px;
+  height: 20px;
+  display: flex;
+  place-items: center;
+  gap: 10px;
+}
+
+.taskItemRight {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.taskItems {
+  border: 1px solid rgb(190, 190, 190);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: row;
+  padding: 8px;
+  width: 650px;
+}
+
+.taskItemLeft {
+  height: 50px;
+  margin: auto;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #747474;
+  font-size: 20px;
+}
