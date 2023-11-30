@@ -18,6 +18,8 @@ import Bookings from "./pages/Bookings/Bookings";
 import Leaderboard from "./pages/Leaderboards/Leaderboard";
 import Community from "./pages/Community/Community";
 import Challanges from "./pages/Challanges/Challanges";
+import Adventures from "./pages/Adventures/Adventures";
+import Host from "./pages/Host/Host";
 
 const App = () => {
   return (
@@ -45,6 +47,7 @@ const Content = () => {
         {!noNeedHeaderSidebar && <SideBar />}
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/adventures" element={<Adventures />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/adventure/:id" element={<AdventureActivity />} />
@@ -53,6 +56,7 @@ const Content = () => {
           <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/community" element={<Community />} />
           <Route path="/challanges" element={<Challanges />} />
+          <Route path="/host/:hostId" element={<Host />} />
         </Routes>
       </main>
     </>

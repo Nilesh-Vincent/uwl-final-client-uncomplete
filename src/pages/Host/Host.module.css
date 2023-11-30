@@ -1,0 +1,173 @@
+.myProfileContainer {
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  width: 100%;
+  padding-top: 30px;
+  place-items: center;
+}
+
+.myProfileItems {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.redBtn {
+  height: 45px;
+  width: 100px;
+  background-color: #000000;
+  color: white;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.profileHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  border: 1px solid #dddddd;
+  border-radius: 20px;
+}
+
+.userInfo {
+  flex: 3;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.ProfilePhoto {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.ProfilePhotoContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.profilePhotoText {
+  width: 130px;
+  text-align: center;
+}
+
+.userName {
+  font-size: 38px;
+  font-weight: 600;
+  padding-bottom: 12px;
+}
+
+.userEmail {
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 12px;
+}
+
+.userDesc {
+  font-size: auto;
+}
+
+.activity {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.activityItem {
+  gap: 4px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  max-width: 240px;
+  width: 240px;
+  margin-bottom: 50px;
+}
+
+.sectionHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 30px;
+  margin-top: 60px;
+}
+
+.sectionHeading h1 {
+  font-size: 28px;
+}
+
+.sectionHeading h2 {
+  font-size: 18px;
+  padding-top: 4px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.activityInfo {
+  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0px;
+  color: black;
+}
+
+.activityImg {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.activityName {
+  color: #333;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.activityCity {
+  font-weight: 300;
+  padding-bottom: 5px;
+}
+
+.activityPrice {
+  font-weight: 500;
+  font-style: bold;
+  padding-bottom: 5px;
+}
+
+.activityCategoryType {
+  font-weight: 400;
+  padding-bottom: 5px;
+}
+
+.activityDuration {
+  font-size: 300;
+  font-style: italic;
+  padding-bottom: 5px;
+}

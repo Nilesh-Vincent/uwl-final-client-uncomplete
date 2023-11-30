@@ -33,9 +33,10 @@ const SideBar = () => {
                   clipRule="evenodd"
                 />
               </svg>
-              <li>ADVENTURES</li>
+              <li>HOME</li>
             </div>
           </Link>
+
           <Link to="/leaderboard">
             <div className={styles["sideBarItem"]}>
               <svg
@@ -72,7 +73,7 @@ const SideBar = () => {
               <li>PROFILE</li>
             </div>
           </Link>
-          {/*  <Link to="/community">
+          <Link to="/community">
             <div className={styles["sideBarItem"]}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +85,7 @@ const SideBar = () => {
 
               <li>COMMUNITY</li>
             </div>
-            </Link>*/}
+          </Link>
           <Link to="/challanges">
             <div className={styles["sideBarItem"]}>
               <svg

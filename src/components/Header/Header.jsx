@@ -1,16 +1,48 @@
 import { Fragment, useState, useRef, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./Header.module.css";
 import Logo from "../UI/Logo/Logo";
 import AuthContext from "../../store/auth-context";
 import axiosInstance from "../../utils/axiosInstance";
 import BaseURL from "../../utils/BaseURL";
+import mapboxgl from "@mapbox/mapbox-sdk";
+import GeocodingService from "@mapbox/mapbox-sdk/services/geocoding";
 
 const Header = () => {
   const context = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const [profile, setProfile] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const [options, setOptions] = useState("Every Adventure");
+  const [showOptions, setShowOptions] = useState(false);
+  const [showProfileMenu, setShowProfileMenu] = useState(false);
+  const [locationValue, setLocationValue] = useState("");
+  const [showLocationSearchBar, setShowLocationSearchBar] = useState(false);
+  const [suggestions, setSuggestions] = useState([]);
+  const [latitude, setLatitude] = useState(null);
+  const [longitude, setLongitude] = useState(null);
+
+  const isLoggedIn = context.isLoggedIn;
+
+  const activityRef = useRef(null);
+  const profileRef = useRef(null);
+
+  const submitSearchHandler = (event) => {
+    event.preventDefault();
+
+    console.log("Selected Location:", locationValue);
+    console.log("Latitude:", latitude);
+    console.log("Longitude:", longitude);
+    console.log("Adventure Type:", options);
+
+    navigate("/adventures", {
+      state: { latitude, longitude, options },
+    });
+
+    window.location.reload();
+  };
 
   useEffect(() => {
     axiosInstance
@@ -25,14 +57,34 @@ const Header = () => {
       });
   }, []);
 
-  const [options, setOptions] = useState("Every Adventure");
-  const [showOptions, setShowOptions] = useState(false);
-  const [showProfileMenu, setShowProfileMenu] = useState(false);
+  useEffect(() => {
+    const mapboxClient = mapboxgl({
+      accessToken:
+        "pk.eyJ1IjoibmlsZXNoNDQiLCJhIjoiY2xpb2JucnhmMDdtYTNlbnZoc3FjemU1ZiJ9.ggJRNTOToRQRv4i3o2q9Vw",
+    });
+    const geocodingService = GeocodingService(mapboxClient);
 
-  const isLoggedIn = context.isLoggedIn;
+    geocodingService
+      .forwardGeocode({
+        query: locationValue,
+        limit: 5, // You can adjust the number of suggestions here
+      })
+      .send()
+      .then((response) => {
+        const features = response.body.features;
+        setSuggestions(features);
+        console.log(suggestions);
+        console.log(features); // Log the suggestions array to the console
+      })
+      .catch((error) => console.error(error));
+  }, [locationValue]);
 
-  const activityRef = useRef(null);
-  const profileRef = useRef(null);
+  const setSuggestionHandler = (suggestion) => {
+    setLocationValue(suggestion.text);
+    setLatitude(suggestion.center[1]);
+    setLongitude(suggestion.center[0]);
+    setShowLocationSearchBar(false);
+  };
 
   const optionShowHandler = (event) => {
     setShowOptions((prevState) => !prevState);
@@ -40,6 +92,11 @@ const Header = () => {
 
   const setShowProfileMenuHandler = (event) => {
     setShowProfileMenu((prevState) => !prevState);
+  };
+
+  const setLocationChangeHandler = (event) => {
+    setLocationValue(event.target.value);
+    console.log("location value ist " + event.target.value);
   };
 
   useEffect(() => {
@@ -72,7 +129,11 @@ const Header = () => {
                 type="text"
                 placeholder="Where to?"
                 className={styles["searchLocation"]}
-                onChange={(e) => console.log(e.target.value)}
+                onChange={setLocationChangeHandler}
+                value={locationValue}
+                onClick={() => {
+                  setShowLocationSearchBar(true);
+                }}
               />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -89,6 +150,19 @@ const Header = () => {
                 />
               </svg>
             </div>
+            {showLocationSearchBar && suggestions.length >= 1 && (
+              <div className={styles.suggestionList}>
+                {suggestions.map((suggestion) => (
+                  <p
+                    className={styles.suggestionListItem}
+                    key={suggestion.id}
+                    onClick={() => setSuggestionHandler(suggestion)}
+                  >
+                    {suggestion.place_name}
+                  </p>
+                ))}
+              </div>
+            )}
             <div
               className={styles["searchItemAdventure"]}
               onClick={optionShowHandler}
@@ -100,31 +174,52 @@ const Header = () => {
                   <ul>
                     <li
                       onClick={() => {
-                        setOptions("Every Adventure");
+                        setOptions("every adventure");
                       }}
                     >
                       Every Adventure
                     </li>
                     <li
                       onClick={() => {
-                        setOptions("Scuba Diving");
+                        setOptions("scuba diving");
                       }}
                     >
                       Scuba Diving
                     </li>
                     <li
                       onClick={() => {
-                        setOptions("Kyaking");
+                        setOptions("wildlife safari");
                       }}
                     >
-                      Kyaking
+                      Wildlife Safari
                     </li>
                     <li
                       onClick={() => {
-                        setOptions("Paragliding");
+                        setOptions("paragliding");
                       }}
                     >
                       Paragliding
+                    </li>
+                    <li
+                      onClick={() => {
+                        setOptions("trekking");
+                      }}
+                    >
+                      Trekking
+                    </li>
+                    <li
+                      onClick={() => {
+                        setOptions("rock climbing");
+                      }}
+                    >
+                      Rock Climbing
+                    </li>
+                    <li
+                      onClick={() => {
+                        setOptions("white water rafting");
+                      }}
+                    >
+                      White Water Rafting
                     </li>
                   </ul>
                 </div>
@@ -142,7 +237,11 @@ const Header = () => {
                 />
               </svg>
             </div>
-            <button type="submit" className={styles["submitBtn"]}>
+            <button
+              type="submit"
+              className={styles["submitBtn"]}
+              onClick={submitSearchHandler}
+            >
               Search
             </button>
           </div>

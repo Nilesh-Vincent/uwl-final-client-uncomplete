@@ -1,0 +1,133 @@
+.searchListContainer {
+  background-color: #f9f9f9;
+  width: 100%;
+  display: flex;
+}
+
+.searchListItems {
+  display: flex;
+  max-width: 1024px;
+  width: 1024px;
+  margin: 0px auto;
+  margin-top: 25px;
+}
+
+.adventureItems {
+  flex: 4;
+  margin: 10px;
+}
+
+.adventureItem {
+  height: auto;
+  width: 630px;
+  border: 1px solid #dddddd;
+  display: flex;
+  margin: 0px auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.itemHeader {
+  margin: 10px 13px;
+}
+
+.imageContainer {
+  display: flex;
+  place-items: center;
+}
+
+.adventureImg {
+  margin: 10px;
+  height: 170px;
+  width: 170px;
+  border-radius: 10px;
+}
+
+.adventureItem {
+  display: flex;
+}
+
+.adventureInformation {
+  margin: 15px;
+  width: 100%;
+}
+
+.adventureName {
+  color: black;
+  font-weight: bold;
+}
+
+.adventurePriceRating {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ratingComponent {
+  background-color: rgb(0, 17, 173);
+  margin: auto;
+  color: white;
+  padding: 6px 10px;
+  font-size: 16px;
+  border-radius: 6px 6px 6px 0px;
+}
+
+.ratingItems {
+  display: flex;
+  gap: 10px;
+  place-items: center;
+}
+
+.ratingItems p {
+  font-size: 15px;
+}
+
+.adventureSummary {
+  margin-top: 7px;
+}
+
+.adventureDifficulty {
+  text-transform: capitalize;
+}
+
+.adventureLocation {
+  text-transform: capitalize;
+  margin-top: 8px;
+}
+
+.sideBarFilter {
+  background-color: rgb(194, 194, 194);
+  height: max-content;
+  flex: 2;
+  position: sticky;
+  margin: 10px;
+  border-radius: 20px;
+  padding: 18px;
+  margin-top: 25px;
+  position: sticky;
+  width: 360px;
+  min-width: 360px;
+}
+
+.sideBarItem {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.sideBarItem input {
+  padding: 7px;
+  border: 1px solid #7a7a7a;
+}
+
+.sideBarItem select {
+  padding: 7px;
+  width: 120px;
+  border: 1px solid #7a7a7a;
+}
+
+a {
+  color: black;
+}

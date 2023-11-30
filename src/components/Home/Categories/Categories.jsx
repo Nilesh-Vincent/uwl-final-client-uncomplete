@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import styles from "./Categories.module.css";
+
 import ScubaDiving from "../../../assets/CategoryImg/scuba-diving.jpg";
 import Trekking from "../../../assets/CategoryImg/Trekking.jpg";
 import Paragliding from "../../../assets/CategoryImg/Paragliding.jpeg";
@@ -41,6 +44,23 @@ const citiesData = [
 ];
 
 const Categories = () => {
+  const [options, setOptions] = useState(null);
+  const [latitude, setLatitude] = useState(null);
+  const [longitude, setLongitude] = useState(null);
+
+  const navigate = useNavigate();
+
+  const navigateToCategories = (city) => {
+    setOptions(city.name.toLowerCase());
+    console.log(options);
+  };
+
+  if (options !== null) {
+    navigate("/adventures", {
+      state: { latitude, longitude, options },
+    });
+  }
+
   return (
     <>
       <div className={styles.sectionHeading}>
@@ -54,7 +74,13 @@ const Categories = () => {
 
       <div className={styles.activities}>
         {citiesData.map((city, index) => (
-          <div className={styles.activityCategory} key={index}>
+          <div
+            className={styles.activityCategory}
+            key={index}
+            onClick={() => {
+              navigateToCategories(city);
+            }}
+          >
             <img
               src={city.imageSrc}
               alt={city.name}

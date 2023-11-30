@@ -50,7 +50,9 @@
 }
 
 .searchItems {
+  position: relative;
   border-radius: 40px;
+  height: 55px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -76,7 +78,7 @@ input:focus {
 
 .option {
   position: absolute;
-  top: 93px;
+  top: 60px;
   z-index: 2;
   background-color: white;
   width: 200px;
@@ -243,4 +245,31 @@ a {
 
 .profileMenu a {
   color: black;
+}
+
+.suggestionList {
+  width: 230px;
+  max-width: 230px;
+  width: auto;
+  z-index: 2;
+  padding: 12px;
+  position: absolute;
+  top: 60px;
+  left: 14px;
+  background-color: white;
+  box-shadow: 1px 2px 13px 3px rgba(0, 0, 0, 0.23);
+  -webkit-box-shadow: 1px 2px 13px 3px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 1px 2px 13px 3px rgba(0, 0, 0, 0.23);
+  border-radius: 12px;
+}
+
+.suggestionListItem {
+  padding: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.suggestionListItem:hover {
+  background-color: lightgray;
+  border-radius: 12px;
 }
